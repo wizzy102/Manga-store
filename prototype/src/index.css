@@ -1,0 +1,82 @@
+@import 'tailwindcss';
+
+/* Brand tokens: dark luxury palette taken from the MANGASTORE logo (silver wolf on black). */
+:root {
+  --ff-body: 'Manrope', system-ui, sans-serif;
+  --ff-mark: 'Cinzel', 'Times New Roman', serif;
+}
+
+@theme inline {
+  --font-sans: var(--ff-body);
+  --font-mark: var(--ff-mark);
+}
+
+@theme {
+  --color-ink: #0b0b0b;
+  --color-coal: #141414;
+  --color-char: #1d1d1d;
+  --color-line: #2a2a2a;
+  --color-mute: #8f8b84;
+  --color-silver: #c9c6c0;
+  --color-bone: #efece6;
+  --color-ember: #e0662a;
+  --color-ok: #6fbf8e;
+  --color-warn: #e3b25a;
+  --color-bad: #e06666;
+}
+
+html {
+  background: var(--color-ink);
+  color: var(--color-bone);
+  -webkit-tap-highlight-color: transparent;
+}
+body {
+  font-family: var(--ff-body);
+  background: var(--color-ink);
+  min-height: 100dvh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* The wordmark uses the serif brand face with wide tracking. */
+.wordmark {
+  font-family: var(--ff-mark);
+  letter-spacing: 0.08em;
+}
+
+::selection {
+  background: var(--color-bone);
+  color: var(--color-ink);
+}
+
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+/* Hide scrollbars on horizontal rails while keeping them scrollable. */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.fade-up {
+  animation: fade-up 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .fade-up {
+    animation: none;
+  }
+}

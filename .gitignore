@@ -1,0 +1,9 @@
+node_modules/
+dist/
+*.tsbuildinfo
+.vite/
+.DS_Store
+Thumbs.db
+
+# In-store Instagram stills of people: kept locally for the pitch, not published.
+prototype/public/images/lookbook/
