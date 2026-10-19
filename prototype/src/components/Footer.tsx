@@ -17,6 +17,9 @@ export function Footer() {
           </a>
         </div>
       </div>
+      <p className="px-4 pb-8 text-center text-xs text-mute md:px-8">
+        Prototype with sample products, prices and delivery fees.
+      </p>
     </footer>
   )
 }

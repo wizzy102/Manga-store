@@ -89,6 +89,10 @@ export function OrderConfirmationPage() {
         </div>
       </div>
 
+      <p className="mt-6 border border-line px-4 py-3 text-xs text-mute">
+        Demo store: this order is saved in your browser only and is not sent to Manga.
+      </p>
+
       <div className="mt-8 flex flex-col gap-3 sm:flex-row">
         <a
           href={whatsappLink(site.whatsapp, waMessage)}
